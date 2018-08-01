@@ -45,6 +45,7 @@ result <- purrr::map(samples,  ~ {
     #`[[`(1)
 })
 
+read_api_config("Validator") %>% POST()
 
 
 

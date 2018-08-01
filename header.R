@@ -63,3 +63,25 @@ get_api_paras <- function(which_api){
   )
   
 }
+
+read_api_config <- function(which_api){
+  
+  # make sure file exists
+  if(!file.exists("apiconfig.yaml")){
+    stop("Require config file - apiconfig.yaml")
+  }
+  
+  # read config
+  d <- read_yaml("apiconfig.yaml")
+  
+  # check if the credentials are specified
+  if(!all(c("host", "port", "swagger") %in% names(d[[which_api]]))){
+    stop(paste("One or more parameter in", which_api, "is missing."))
+  }
+  
+  # return endpoint
+  endpoint = with(d[[which_api]], paste0(host, ":", port, "/", swagger))
+  
+  # return 
+  endpoint
+}
