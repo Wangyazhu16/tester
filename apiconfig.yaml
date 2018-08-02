@@ -5,4 +5,10 @@ test_docker:
     host: test
     port: 8899
     swagger: test_docker 
+    
+validator:
+    #host: 127.0.0.1
+    host: validator
+    port: 8800
+    swagger: validator
 ...

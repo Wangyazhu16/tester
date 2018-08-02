@@ -45,8 +45,11 @@ result <- purrr::map(samples,  ~ {
     #`[[`(1)
 })
 
+cat_rule("Exported result.", col = "lightblue")
 
+read_api_config("validator") %>% POST()
 
+cat_rule("Mission complete.", col = "green") 
 
 
 
