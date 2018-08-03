@@ -1,0 +1,11 @@
+.RData
+.Rhistory
+README.md
+.DS_Store    
+*.Rproj
+.git
+Dockerfile
+some-mongo.sh
+.Rproj.user
+.gitignore
+demo.sh
